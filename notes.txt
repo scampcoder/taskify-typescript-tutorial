@@ -34,3 +34,6 @@ let printColor: (color: string) => void; //another way to represent a function. 
 let sayNothing: (nada: string) => never; //will never return anything
 
 let myFavoriteThing: unknown; //reccommended to use instead of using type 'any'
+
+
+React.FC = functional component
