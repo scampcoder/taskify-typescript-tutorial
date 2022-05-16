@@ -1,0 +1,36 @@
+let name: string;
+let age: number | string; //this is called a 'union' it represents vars that can be multiple types
+let isStudent: boolean;
+let hobbies: string[];
+let role: [number, string]; //represents a tuple containing one number and one string.
+
+type Person = {
+  name: string,
+  age?: number //this means the age property is optional thanks to the '?'
+}
+
+//interfaces and types work similarly, but when combining, have diff syntax
+// type X = Y & {...}
+//interface Y extends X {...}
+
+interface Dog {
+  name: string,
+  age?: number
+}
+
+let person: Person = {
+  name: "Victoria",
+  age: 26
+};
+
+let lotsOfPeople: Person[]; //represents an array of the person objects
+
+function printFood(food: string){
+  console.log(food);
+}
+printFood('pizza')
+
+let printColor: (color: string) => void; //another way to represent a function. void just means that we aren't returning anything
+let sayNothing: (nada: string) => never; //will never return anything
+
+let myFavoriteThing: unknown; //reccommended to use instead of using type 'any'
