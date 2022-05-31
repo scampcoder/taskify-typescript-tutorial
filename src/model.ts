@@ -3,3 +3,4 @@ export default interface Todo{
     todo: string;
     isDone: boolean;
 }
+
